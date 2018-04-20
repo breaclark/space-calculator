@@ -1,3 +1,7 @@
+export function yearstoSeconds (input) {
+  return input * 31556952;
+}
+
 class Person {
   constructor (birthdate) {
     // needs to be in "year, month, day" format
