@@ -36,6 +36,11 @@ class Person {
     return (78.7 - this.difference/31556952000)*0.24;
   }
 
+  venusLifeLeft () {
+    // 31556952000 milliseconds in a year
+    return (78.7 - this.difference/31556952000)*0.62;
+  }
+
 }
 
 export { Person };
