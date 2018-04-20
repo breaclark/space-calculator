@@ -6,7 +6,6 @@ import { Person } from "./space.js";
 
 
 function planetDraw (canvas, circle, planetVal, multiplier) {
-  $("#result").text(planetVal);
   let arcVal = (planetVal/(78.7 * multiplier)) * 2 * Math.PI;
   circle.clearRect(0, 0, canvas.width, canvas.height);
   circle.beginPath();
@@ -64,10 +63,8 @@ $(document).ready(function() {
       planetDraw(canvas, circle, earthVal, 1);
     }
   });
-
   $("#bday-form").submit(function(event){
     person = new Person($("#bday").val());
-    $("#result").text(person.birthdate);
     $("#" + planet + "-btn").click();
     event.preventDefault();
   });
