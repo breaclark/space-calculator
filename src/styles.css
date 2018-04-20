@@ -11,3 +11,7 @@ body {
 img {
   width: 75vh;
 }
+
+#bday-btn {
+  display: none;
+}
