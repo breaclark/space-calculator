@@ -31,6 +31,11 @@ class Person {
     return (this.difference/31556952000)*11.86;
   }
 
+  mercuryLifeLeft () {
+    // 31556952000 milliseconds in a year
+    return (78.7 - this.difference/31556952000)*0.24;
+  }
+
 }
 
 export { Person };
