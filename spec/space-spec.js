@@ -82,5 +82,10 @@ describe("Person", function () {
     expect(olderPerson.marsLifeLeft()).toBeLessThan(-71.59);
   });
 
+  it("should return the person's years past life expectancy in Jupiter years", function() {
+    expect(olderPerson.jupiterLifeLeft()).toBeGreaterThan(-451.65);
+    expect(olderPerson.jupiterLifeLeft()).toBeLessThan(-451.64);
+  });
+
 
 });
