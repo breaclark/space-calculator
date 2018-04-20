@@ -8,6 +8,7 @@ describe("Person", function () {
     person = new Person("1992, 08, 09");
   });
 
+  // preliminary tests
   it("should be an instance of the person class", function() {
     expect(person).toEqual(jasmine.any(Person));
   });
@@ -16,10 +17,12 @@ describe("Person", function () {
     expect(person.birthdate).toEqual(jasmine.any(Date));
   });
 
+  // earth time from birthday in seconds
   it("should return the number of seconds between birthdate and now in seconds", function() {
     expect(person.birthdateToNowSeconds()).toEqual(813490950);
   });
 
+  // planet times from birthday in years
   it("should return the person's age in Mercury years", function() {
     expect(person.mercuryAge()).toBeGreaterThan(6.18);
     expect(person.mercuryAge()).toBeLessThan(6.19);
@@ -39,5 +42,12 @@ describe("Person", function () {
     expect(person.jupiterAge()).toBeGreaterThan(305.73);
     expect(person.jupiterAge()).toBeLessThan(305.74);
   });
+
+  // planet times to death in years
+  it("should return the person's expected years left in Mercury years", function() {
+    expect(person.mercuryLifeLeft()).toBeGreaterThan(12.70);
+    expect(person.mercuryLifeLeft()).toBeLessThan(12.71);
+  });
+
 
 });
