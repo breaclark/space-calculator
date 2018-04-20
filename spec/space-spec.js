@@ -35,7 +35,7 @@ describe("Person", function () {
     expect(person.birthdate).toEqual(jasmine.any(Date));
   });
 
-
+  // All these tests are operating off of the assumption that in the Person class this.now = new Date(2018, 4, 20, 9, 42, 30, 0)
   // earth time from birthday in seconds
   it("should return the number of seconds between birthdate and now in seconds", function() {
     expect(person.birthdateToNowSeconds()).toEqual(813490950);
