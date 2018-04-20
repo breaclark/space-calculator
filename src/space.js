@@ -10,6 +10,10 @@ class Person {
     return this.difference/1000;
   }
 
+  mercuryAge () {
+    return (this.difference/31,556,952,000)*0.24;
+  }
+
 }
 
 export { Person };
