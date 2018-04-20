@@ -2,52 +2,48 @@ class Person {
   constructor (birthdate) {
     // needs to be in "year, month, day" format
     this.birthdate = new Date(birthdate);
-    this.now = new Date(2018, 4, 20, 9, 42, 30, 0);
+    this.now = new Date(Date.now());
+    //this.now = new Date(2018, 4, 20, 9, 42, 30, 0) // used for testing;
     this.difference = this.now - this.birthdate;
   }
 
+  // 1000 milliseconds in a second
+  // 31556952000 milliseconds in a year
+  // 78.7 years in the average american lifespan
+
   birthdateToNowSeconds () {
-    // 1000 milliseconds in a second
     return this.difference/1000;
   }
 
   mercuryAge () {
-    // 31556952000 milliseconds in a year
     return (this.difference/31556952000)*0.24;
   }
 
   venusAge () {
-    // 31556952000 milliseconds in a year
     return (this.difference/31556952000)*0.62;
   }
 
   marsAge () {
-    // 31556952000 milliseconds in a year
     return (this.difference/31556952000)*1.88;
   }
 
   jupiterAge () {
-    // 31556952000 milliseconds in a year
     return (this.difference/31556952000)*11.86;
   }
 
   mercuryLifeLeft () {
-    // 31556952000 milliseconds in a year
     return (78.7 - this.difference/31556952000)*0.24;
   }
 
   venusLifeLeft () {
-    // 31556952000 milliseconds in a year
     return (78.7 - this.difference/31556952000)*0.62;
   }
 
   marsLifeLeft () {
-    // 31556952000 milliseconds in a year
     return (78.7 - this.difference/31556952000)*1.88;
   }
 
   jupiterLifeLeft () {
-    // 31556952000 milliseconds in a year
     return (78.7 - this.difference/31556952000)*11.86;
   }
 
