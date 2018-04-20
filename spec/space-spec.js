@@ -49,5 +49,10 @@ describe("Person", function () {
     expect(person.mercuryLifeLeft()).toBeLessThan(12.71);
   });
 
+  it("should return the person's expected years left in Venus years", function() {
+    expect(person.venusLifeLeft()).toBeGreaterThan(32.81);
+    expect(person.venusLifeLeft()).toBeLessThan(32.82);
+  });
+
 
 });
