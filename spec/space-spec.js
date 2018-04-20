@@ -59,4 +59,9 @@ describe("Person", function () {
     expect(person.marsLifeLeft()).toBeLessThan(99.50);
   });
 
+  it("should return the person's expected years left in Jupiter years", function() {
+    expect(person.jupiterLifeLeft()).toBeGreaterThan(627.64);
+    expect(person.jupiterLifeLeft()).toBeLessThan(627.65);
+  });
+
 });
