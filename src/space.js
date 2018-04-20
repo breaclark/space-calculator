@@ -1,6 +1,6 @@
 class Person {
   constructor (birthdate) {
-    this.birthdate = birthdate;
+    this.birthdate = new Date(birthdate);
   }
 }
 
