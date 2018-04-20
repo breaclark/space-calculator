@@ -8,9 +8,11 @@ $(document).ready(function() {
 
   let canvas = document.getElementById("canvas");
   let circle = canvas.getContext("2d");
-
   let person;
+  let planet = "earth";
+
   $("#mercury-btn").click(function() {
+    planet ="mercury";
     $("#planet").attr("src","img/mercury.png");
     if(person) {
       let mercVal = person.mercuryAge();
@@ -26,6 +28,7 @@ $(document).ready(function() {
     }
   });
   $("#venus-btn").click(function() {
+    planet = "venus";
     $("#planet").attr("src","img/venus.png");
     if(person) {
       let venVal = person.venusAge();
@@ -41,6 +44,7 @@ $(document).ready(function() {
     }
   });
   $("#mars-btn").click(function() {
+    planet = "mars";
     $("#planet").attr("src","img/mars.png");
     if(person) {
       let marsVal = person.marsAge();
@@ -56,6 +60,7 @@ $(document).ready(function() {
     }
   });
   $("#jupiter-btn").click(function() {
+    planet = "jupiter";
     $("#planet").attr("src","img/jupiter.png");
     if(person) {
       let jupVal = person.jupiterAge();
@@ -71,6 +76,7 @@ $(document).ready(function() {
     }
   });
   $("#earth-btn").click(function() {
+    planet = "earth";
     $("#planet").attr("src","img/earth.png");
     if(person) {
       let earthVal = person.birthdateToNowSeconds() / 31556952;
@@ -89,6 +95,7 @@ $(document).ready(function() {
   $("#bday-form").submit(function(event){
     person = new Person($("#bday").val());
     $("#result").text(person.birthdate);
+    $("#" + planet + "-btn").click();
     // let earthVal = person.birthdateToNowSeconds() / 31556952;
     // $("#result").text(earthVal);
     // let arcVal = (earthVal/(78.7))*2*Math.PI;
@@ -99,6 +106,7 @@ $(document).ready(function() {
     // circle.closePath();
     // circle.fillStyle="rgb(40, 40, 40, 0.7)";
     // circle.fill();
+    event.preventDefault();
   });
 });
 
