@@ -16,6 +16,11 @@ class Person {
     return (this.difference/31556952000)*0.24;
   }
 
+  venusAge () {
+    // 31556952000 milliseconds in a year
+    return (this.difference/31556952000)*0.62;
+  }
+
 }
 
 export { Person };
