@@ -9,8 +9,8 @@ function planetDraw (canvas, circle, planetVal, multiplier) {
   let arcVal = (planetVal/(78.7 * multiplier)) * 2 * Math.PI;
   circle.clearRect(0, 0, canvas.width, canvas.height);
   circle.beginPath();
-  circle.moveTo(300,300);
-  circle.arc(300,300,230,0,arcVal);
+  circle.moveTo(270,270);
+  circle.arc(270,270,220,0,arcVal);
   circle.closePath();
   circle.fillStyle="rgb(40, 40, 40, 0.7)";
   circle.fill();

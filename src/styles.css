@@ -21,8 +21,8 @@ h2 {
 img {
   position: absolute;
   margin-top: 40px;
-  width: 600px;
-  height: 600px;
+  width: 540px;
+  height: 540px;
 }
 
 #canvas {
@@ -46,5 +46,15 @@ img {
 }
 
 #years, #years-left {
-  font-size: 30px;
+  font-size: 28px;
+}
+
+@media screen and (max-width: 766px){
+  .break {
+    display : none;
+  }
+  .btn-light {
+    width: 85px;
+    margin: 4px;
+  }
 }

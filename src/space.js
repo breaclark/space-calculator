@@ -12,7 +12,6 @@ export function differenceInSeconds (input1, input2) {
 
 class Person {
   constructor (birthdate) {
-    // needs to be in "year, month, day" format
     this.birthdate = new Date(birthdate);
     this.now = new Date(Date.now());
     //this.now = new Date(2018, 4, 20, 9, 42, 30, 0) // used for testing;

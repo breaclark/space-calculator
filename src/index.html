@@ -5,7 +5,7 @@
   </head>
   <body>
     <div class="container">
-      <h2>Enter your date of birth below to find out your age and expected lifespan on different planets</h2>
+      <h2>Enter your date of birth below to find out your age and expected remaining lifespan on different planets</h2>
       <form id="bday-form">
         <div class="form-group">
           <input id="bday" class="form-control" type="date" required>
@@ -13,16 +13,16 @@
         <button type="submit" id="bday-btn" class="btn btn-light"></button>
       </form>
       <div class="row">
-        <div class="col-md-3">
-          <button type="button" id="mercury-btn" class="btn btn-light">Mercury</button></br>
-          <button type="button" id="venus-btn" class="btn btn-light">Venus</button></br>
-          <button type="button" id="mars-btn" class="btn btn-light">Mars</button></br>
-          <button type="button" id="jupiter-btn" class="btn btn-light">Jupiter</button></br>
+        <div id="buttons" class="col-md-3">
+          <button type="button" id="mercury-btn" class="btn btn-light">Mercury</button><br class="break"/>
+          <button type="button" id="venus-btn" class="btn btn-light">Venus</button><br class="break"/>
+          <button type="button" id="mars-btn" class="btn btn-light">Mars</button><br class="break"/>
+          <button type="button" id="jupiter-btn" class="btn btn-light">Jupiter</button><br class="break"/>
           <button type="button" id="earth-btn" class="btn btn-light">Earth</button>
         </div>
         <div class="col-md-9">
           <img id="planet" src="img/earth.png" alt="planet">
-          <canvas id="canvas" width=600 height=600></canvas>
+          <canvas id="canvas" width=540 height=540></canvas>
           <div id="years">
           </div>
           <div id="years-left">
