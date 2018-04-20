@@ -1,11 +1,19 @@
 import { Person } from "./../src/space.js";
 import { yearsToSeconds } from "./../src/space.js";
+import { differenceInSeconds } from "./../src/space.js";
 
 describe("yearsToSeconds", function () {
   it("should convert years to seconds", function() {
     expect(yearsToSeconds(35)).toEqual(1104493320);
   });
 });
+
+describe("differenceInSeconds", function () {
+  it("should return difference between two dates in seconds", function() {
+    expect(differenceInSeconds("1992, 08, 09", "2018, 4, 20")).toEqual(810864000);
+  });
+});
+
 
 describe("Person", function () {
 
