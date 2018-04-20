@@ -13,10 +13,14 @@ $(document).ready(function() {
   $("#mercury-btn").click(function() {
     $("#planet").attr("src","img/mercury.png");
     if(person) {
-      $("#result").text(person.mercuryAge());
+      let mercVal = person.mercuryAge()
+      $("#result").text(mercVal);
+      let arcVal = (mercVal/(78.7*.24))*2*Math.PI;
       circle.clearRect(0, 0, canvas.width, canvas.height);
       circle.beginPath();
-      circle.arc(300,300,200,0,1*Math.PI);
+      circle.moveTo(300,300);
+      circle.arc(300,300,200,0,arcVal);
+      circle.closePath();
       circle.fillStyle="rgb(40, 40, 40, 0.7)";
       circle.fill();
     }
