@@ -67,9 +67,14 @@ describe("Person", function () {
   });
 
   // planet times past expected death in years
-  it("should return the person's expected years left in Mercury years", function() {
+  it("should return the person's years past life expectancy in Mercury years", function() {
     expect(olderPerson.mercuryLifeLeft()).toBeGreaterThan(-9.14);
     expect(olderPerson.mercuryLifeLeft()).toBeLessThan(-9.13);
+  });
+
+  it("should return the person's years past life expectancy in Venus years", function() {
+    expect(olderPerson.venusLifeLeft()).toBeGreaterThan(-23.62);
+    expect(olderPerson.venusLifeLeft()).toBeLessThan(-23.61);
   });
 
 
