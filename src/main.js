@@ -2,7 +2,7 @@ import $ from "jquery";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
-//import { Person } from "./space.js";
+import { Person } from "./space.js";
 
 $(document).ready(function() {
   $("#mercury-btn").click(function() {
@@ -19,6 +19,12 @@ $(document).ready(function() {
   });
   $("#earth-btn").click(function() {
     $("#planet").attr("src","img/earth.png");
+  });
+
+  $("#bday-form").submit(function(event){
+    let person = new Person($("#bday").val());
+    $("#result").text(person.birthdate);
+    event.preventDefault();
   });
 });
 
