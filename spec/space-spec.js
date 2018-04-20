@@ -1,4 +1,11 @@
 import { Person } from "./../src/space.js";
+import { yearsToSeconds } from "./../src/space.js";
+
+describe("yearsToSeconds", function () {
+  it("should convert years to seconds", function() {
+    expect(yearsToSeconds(35)).toEqual(1104493320);
+  });
+});
 
 describe("Person", function () {
 
