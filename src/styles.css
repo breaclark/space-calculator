@@ -15,3 +15,14 @@ img {
 #bday-btn {
   display: none;
 }
+
+img {
+  position: absolute;
+}
+
+#canvas {
+  width: 120%;
+  height: 120%;
+  position: relative;
+  z-index: 2;
+}

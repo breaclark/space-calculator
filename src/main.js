@@ -33,7 +33,7 @@ $(document).ready(function() {
   $("#earth-btn").click(function() {
     $("#planet").attr("src","img/earth.png");
     if(person) {
-      $("#result").text(person.bithdate;
+      $("#result").text(person.birthdate);
     }
   });
 
@@ -44,6 +44,4 @@ $(document).ready(function() {
   });
 });
 
-
-// at the bottom have a tell me my age button
 // overlays on the planet your age in a pie chart of expected age
