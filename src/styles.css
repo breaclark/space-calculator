@@ -4,8 +4,14 @@ body {
   color: #ffffff;
 }
 
+h2 {
+  margin-top: 10%;
+}
+
 .btn-light {
   margin-top: 10vh;
+  font-size: 18px;
+  width: 100px;
 }
 
 img {
