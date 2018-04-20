@@ -26,6 +26,11 @@ class Person {
     return (this.difference/31556952000)*1.88;
   }
 
+  jupiterAge () {
+    // 31556952000 milliseconds in a year
+    return (this.difference/31556952000)*11.86;
+  }
+
 }
 
 export { Person };

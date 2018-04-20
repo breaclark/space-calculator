@@ -35,4 +35,9 @@ describe("Person", function () {
     expect(person.marsAge()).toBeLessThan(48.47);
   });
 
+  it("should return the person's age in Jupiter years", function() {
+    expect(person.jupiterAge()).toBeGreaterThan(305.73);
+    expect(person.jupiterAge()).toBeLessThan(305.74);
+  });
+
 });
