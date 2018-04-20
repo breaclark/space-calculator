@@ -1,13 +1,19 @@
-export function yearstoSeconds (input) {
+export function yearsToSeconds (input) {
   return input * 31556952;
+}
+
+export function differenceInSeconds (input1, input2) {
+  let date1 = new Date(input1);
+  let date2 = new Date(input2);
+  return (date2 - date1)/1000;
 }
 
 class Person {
   constructor (birthdate) {
     // needs to be in "year, month, day" format
     this.birthdate = new Date(birthdate);
-    this.now = new Date(Date.now());
-    //this.now = new Date(2018, 4, 20, 9, 42, 30, 0) // used for testing;
+    //this.now = new Date(Date.now());
+    this.now = new Date(2018, 4, 20, 9, 42, 30, 0) // used for testing;
     this.difference = this.now - this.birthdate;
   }
 
