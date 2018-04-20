@@ -3,9 +3,11 @@ import { Person } from "./../src/space.js";
 describe("Person", function () {
 
   let person;
+  let olderPerson;
 
   beforeEach(function() {
     person = new Person("1992, 08, 09");
+    olderPerson = new Person("1901, 08, 09");
   });
 
   // preliminary tests
@@ -63,5 +65,12 @@ describe("Person", function () {
     expect(person.jupiterLifeLeft()).toBeGreaterThan(627.64);
     expect(person.jupiterLifeLeft()).toBeLessThan(627.65);
   });
+
+  // planet times past expected death in years
+  it("should return the person's expected years left in Mercury years", function() {
+    expect(olderPerson.mercuryLifeLeft()).toBeGreaterThan(-9.14);
+    expect(olderPerson.mercuryLifeLeft()).toBeLessThan(-9.13);
+  });
+
 
 });
