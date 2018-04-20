@@ -14,22 +14,20 @@ h2 {
   width: 100px;
 }
 
-img {
-  width: 75vh;
-}
-
 #bday-btn {
   display: none;
 }
 
 img {
   position: absolute;
+  margin-top: 40px;
   width: 600px;
   height: 600px;
 }
 
 #canvas {
   position: relative;
+  margin-top: 40px;
   z-index: 2;
 }
 
