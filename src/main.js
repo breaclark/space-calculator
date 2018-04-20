@@ -5,17 +5,19 @@ import "./styles.css";
 import { Person } from "./space.js";
 
 $(document).ready(function() {
+
+  let canvas = document.getElementById("canvas");
+  let circle = canvas.getContext("2d");
+  circle.beginPath();
+  circle.arc(150,75,75,0,2*Math.PI);
+  circle.fillStyle="red";
+  circle.fill();
+
   let person;
   $("#mercury-btn").click(function() {
     $("#planet").attr("src","img/mercury.png");
     if(person) {
       $("#result").text(person.mercuryAge());
-      let canvas = document.getElementById("canvas");
-      let circle = canvas.getContext("2d");
-      circle.beginPath();
-      circle.arc(100,75,50,0,2*Math.PI);
-      circle.fillStyle="red";
-      circle.fill();
     }
   });
   $("#venus-btn").click(function() {

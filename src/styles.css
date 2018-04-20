@@ -18,11 +18,11 @@ img {
 
 img {
   position: absolute;
+  width: 600px;
+  height: 600px;
 }
 
 #canvas {
-  width: 120%;
-  height: 120%;
   position: relative;
   z-index: 2;
 }
