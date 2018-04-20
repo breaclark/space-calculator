@@ -30,4 +30,9 @@ describe("Person", function () {
     expect(person.venusAge()).toBeLessThan(15.99);
   });
 
+  it("should return the person's age in Mars years", function() {
+    expect(person.marsAge()).toBeGreaterThan(48.46);
+    expect(person.marsAge()).toBeLessThan(48.47);
+  });
+
 });
