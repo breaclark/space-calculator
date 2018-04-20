@@ -1,3 +1,9 @@
 body {
-  background-color: #7FDBFF;
+  background-color: #000b14;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  color: #ffffff;
+}
+
+.btn-light {
+  margin-top: 15vh;
 }
