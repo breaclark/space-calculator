@@ -17,7 +17,7 @@ $(document).ready(function() {
       circle.clearRect(0, 0, canvas.width, canvas.height);
       circle.beginPath();
       circle.arc(300,300,200,0,1*Math.PI);
-      circle.fillStyle="red";
+      circle.fillStyle="rgb(40, 40, 40, 0.7)";
       circle.fill();
     }
   });
@@ -28,7 +28,7 @@ $(document).ready(function() {
       circle.clearRect(0, 0, canvas.width, canvas.height);
       circle.beginPath();
       circle.arc(300,300,200,0,2*Math.PI);
-      circle.fillStyle="red";
+      circle.fillStyle="rgb(40, 40, 40, 0.7)";
       circle.fill();
     }
   });
@@ -39,7 +39,7 @@ $(document).ready(function() {
       circle.clearRect(0, 0, canvas.width, canvas.height);
       circle.beginPath();
       circle.arc(300,300,200,0,2*Math.PI);
-      circle.fillStyle="red";
+      circle.fillStyle="rgb(40, 40, 40, 0.7)";
       circle.fill();
     }
   });
@@ -50,7 +50,7 @@ $(document).ready(function() {
       circle.clearRect(0, 0, canvas.width, canvas.height);
       circle.beginPath();
       circle.arc(300,300,200,0,2*Math.PI);
-      circle.fillStyle="red";
+      circle.fillStyle="rgb(40, 40, 40, 0.7)";
       circle.fill();
     }
   });
@@ -61,7 +61,7 @@ $(document).ready(function() {
       circle.clearRect(0, 0, canvas.width, canvas.height);
       circle.beginPath();
       circle.arc(300,300,200,0,2*Math.PI);
-      circle.fillStyle="red";
+      circle.fillStyle="rgb(40, 40, 40, 0.7)";
       circle.fill();
     }
   });
@@ -71,7 +71,7 @@ $(document).ready(function() {
     $("#result").text(person.birthdate);
     circle.beginPath();
     circle.arc(300,300,200,0,2*Math.PI);
-    circle.fillStyle="red";
+    circle.fillStyle="rgb(40, 40, 40, 0.7)";
     circle.fill();
     event.preventDefault();
   });
