@@ -25,6 +25,9 @@ describe("Person", function () {
     expect(person.mercuryAge()).toBeLessThan(6.19);
   });
 
-
+  it("should return the person's age in Venus years", function() {
+    expect(person.venusAge()).toBeGreaterThan(15.98);
+    expect(person.venusAge()).toBeLessThan(15.99);
+  });
 
 });
