@@ -10,7 +10,7 @@ function planetDraw (canvas, circle, planetVal, multiplier) {
   circle.clearRect(0, 0, canvas.width, canvas.height);
   circle.beginPath();
   circle.moveTo(300,300);
-  circle.arc(300,300,200,0,arcVal);
+  circle.arc(300,300,230,0,arcVal);
   circle.closePath();
   circle.fillStyle="rgb(40, 40, 40, 0.7)";
   circle.fill();
@@ -30,7 +30,7 @@ $(document).ready(function() {
       let mercVal = person.mercuryAge();
       planetDraw(canvas, circle, mercVal, 0.24);
       $("#years").text(Math.floor(mercVal) + " years old");
-      $("#years-left").text(Math.floor(78.7 * 0.24 - mercVal) + " years left");
+      $("#years-left").text(Math.floor(person.mercuryLifeLeft()) + " years left");
     }
   });
   $("#venus-btn").click(function() {
@@ -40,7 +40,7 @@ $(document).ready(function() {
       let venVal = person.venusAge();
       planetDraw(canvas, circle, venVal, 0.62);
       $("#years").text(Math.floor(venVal) + " years old");
-      $("#years-left").text(Math.floor(78.7 * 0.62 - venVal) + " years left");
+      $("#years-left").text(Math.floor(person.venusLifeLeft()) + " years left");
     }
   });
   $("#mars-btn").click(function() {
@@ -50,7 +50,7 @@ $(document).ready(function() {
       let marsVal = person.marsAge();
       planetDraw(canvas, circle, marsVal, 1.88);
       $("#years").text(Math.floor(marsVal) + " years old");
-      $("#years-left").text(Math.floor(78.7 * 1.88 - marsVal) + " years left");
+      $("#years-left").text(Math.floor(person.marsLifeLeft()) + " years left");
     }
   });
   $("#jupiter-btn").click(function() {
@@ -60,7 +60,7 @@ $(document).ready(function() {
       let jupVal = person.jupiterAge();
       planetDraw(canvas, circle, jupVal, 11.86);
       $("#years").text(Math.floor(jupVal) + " years old");
-      $("#years-left").text(Math.floor(78.7 * 11.86 - jupVal) + " years left");
+      $("#years-left").text(Math.floor(person.jupiterLifeLeft()) + " years left");
     }
   });
   $("#earth-btn").click(function() {
