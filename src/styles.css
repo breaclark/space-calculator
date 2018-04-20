@@ -7,3 +7,7 @@ body {
 .btn-light {
   margin-top: 15vh;
 }
+
+img {
+  width: 75vh;
+}
