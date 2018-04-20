@@ -20,6 +20,11 @@ describe("Person", function () {
     expect(person.birthdateToNowSeconds()).toEqual(813490950);
   });
 
+  it("should return the person's age in Mercury years", function() {
+    expect(person.mercuryAge()).toBeGreaterThan(6.18);
+    expect(person.mercuryAge()).toBeLessThan(6.19);
+  });
+
 
 
 });
