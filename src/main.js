@@ -61,11 +61,14 @@ $(document).ready(function() {
     if(person) {
       let earthVal = person.birthdateToNowSeconds() / 31556952;
       planetDraw(canvas, circle, earthVal, 1);
+      $("#years").text(Math.floor(earthVal) + " years");
+      $("#years-left").text(Math.floor(78.7 - earthVal) + " years left");
     }
   });
   $("#bday-form").submit(function(event){
     person = new Person($("#bday").val());
     $("#" + planet + "-btn").click();
+    $("#bday-form")[0].reset();
     event.preventDefault();
   });
 });

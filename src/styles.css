@@ -36,7 +36,11 @@ img {
 
 #years-left {
   position: relative;
-  bottom: 400px;
-  left: 350px;
+  bottom: 410px;
+  left: 310px;
   z-index: 4;
+}
+
+#years, #years-left {
+  font-size: 30px;
 }
