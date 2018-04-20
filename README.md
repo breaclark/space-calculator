@@ -20,10 +20,10 @@ A project to practice test driven development and use object oriented programmin
 | Program can return remaining years life expectancy on Venus | April 20th, 1993 | 33.29 |
 | Program can return remaining years life expectancy on Mars | April 20th, 1993 | 100.95 |
 | Program can return remaining years life expectancy on Jupiter | April 20th, 1993 | 636.88 |
-| Program returns years past life expectancy on Mercury if current age is past life expectancy | April 20th, 1901 | -9.19 |
-| Program returns years past life expectancy on Venus if current age is past life expectancy | April 20th, 1901 | -23.74 |
-| Program returns years past life expectancy on Mars if current age is past life expectancy | April 20th, 1901 | -72.00 |
-| Program returns years past life expectancy on Jupiter if current age is past life expectancy | April 20th, 1901 | -454.23 |
+| Program can return years past life expectancy on Mercury if current age is past life expectancy | April 20th, 1901 | -9.19 |
+| Program can return years past life expectancy on Venus if current age is past life expectancy | April 20th, 1901 | -23.74 |
+| Program can return years past life expectancy on Mars if current age is past life expectancy | April 20th, 1901 | -72.00 |
+| Program can return years past life expectancy on Jupiter if current age is past life expectancy | April 20th, 1901 | -454.23 |
 
 ## Setup/Installation Requirements
 
