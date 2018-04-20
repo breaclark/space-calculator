@@ -29,6 +29,8 @@ $(document).ready(function() {
     if(person) {
       let mercVal = person.mercuryAge();
       planetDraw(canvas, circle, mercVal, 0.24);
+      $("#years").text(Math.floor(mercVal) + " years old");
+      $("#years-left").text(Math.floor(78.7 * 0.24 - mercVal) + " years left");
     }
   });
   $("#venus-btn").click(function() {
@@ -37,6 +39,8 @@ $(document).ready(function() {
     if(person) {
       let venVal = person.venusAge();
       planetDraw(canvas, circle, venVal, 0.62);
+      $("#years").text(Math.floor(venVal) + " years old");
+      $("#years-left").text(Math.floor(78.7 * 0.62 - venVal) + " years left");
     }
   });
   $("#mars-btn").click(function() {
@@ -45,6 +49,8 @@ $(document).ready(function() {
     if(person) {
       let marsVal = person.marsAge();
       planetDraw(canvas, circle, marsVal, 1.88);
+      $("#years").text(Math.floor(marsVal) + " years old");
+      $("#years-left").text(Math.floor(78.7 * 1.88 - marsVal) + " years left");
     }
   });
   $("#jupiter-btn").click(function() {
@@ -53,6 +59,8 @@ $(document).ready(function() {
     if(person) {
       let jupVal = person.jupiterAge();
       planetDraw(canvas, circle, jupVal, 11.86);
+      $("#years").text(Math.floor(jupVal) + " years old");
+      $("#years-left").text(Math.floor(78.7 * 11.86 - jupVal) + " years left");
     }
   });
   $("#earth-btn").click(function() {
@@ -61,7 +69,7 @@ $(document).ready(function() {
     if(person) {
       let earthVal = person.birthdateToNowSeconds() / 31556952;
       planetDraw(canvas, circle, earthVal, 1);
-      $("#years").text(Math.floor(earthVal) + " years");
+      $("#years").text(Math.floor(earthVal) + " years old");
       $("#years-left").text(Math.floor(78.7 - earthVal) + " years left");
     }
   });
