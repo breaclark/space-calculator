@@ -21,6 +21,11 @@ class Person {
     return (this.difference/31556952000)*0.62;
   }
 
+  marsAge () {
+    // 31556952000 milliseconds in a year
+    return (this.difference/31556952000)*1.88;
+  }
+
 }
 
 export { Person };
