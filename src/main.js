@@ -4,6 +4,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 import { Person } from "./space.js";
 
+
+function planetDraw (canvas, circle, planetVal, multiplier) {
+  $("#result").text(planetVal);
+  let arcVal = (planetVal/(78.7 * multiplier)) * 2 * Math.PI;
+  circle.clearRect(0, 0, canvas.width, canvas.height);
+  circle.beginPath();
+  circle.moveTo(300,300);
+  circle.arc(300,300,200,0,arcVal);
+  circle.closePath();
+  circle.fillStyle="rgb(40, 40, 40, 0.7)";
+  circle.fill();
+}
+
 $(document).ready(function() {
 
   let canvas = document.getElementById("canvas");
@@ -16,15 +29,7 @@ $(document).ready(function() {
     $("#planet").attr("src","img/mercury.png");
     if(person) {
       let mercVal = person.mercuryAge();
-      $("#result").text(mercVal);
-      let arcVal = (mercVal/(78.7*.24))*2*Math.PI;
-      circle.clearRect(0, 0, canvas.width, canvas.height);
-      circle.beginPath();
-      circle.moveTo(300,300);
-      circle.arc(300,300,200,0,arcVal);
-      circle.closePath();
-      circle.fillStyle="rgb(40, 40, 40, 0.7)";
-      circle.fill();
+      planetDraw(canvas, circle, mercVal, 0.24);
     }
   });
   $("#venus-btn").click(function() {
@@ -32,15 +37,7 @@ $(document).ready(function() {
     $("#planet").attr("src","img/venus.png");
     if(person) {
       let venVal = person.venusAge();
-      $("#result").text(venVal);
-      let arcVal = (venVal/(78.7*.62))*2*Math.PI;
-      circle.clearRect(0, 0, canvas.width, canvas.height);
-      circle.beginPath();
-      circle.moveTo(300,300);
-      circle.arc(300,300,200,0,arcVal);
-      circle.closePath();
-      circle.fillStyle="rgb(40, 40, 40, 0.7)";
-      circle.fill();
+      planetDraw(canvas, circle, venVal, 0.62);
     }
   });
   $("#mars-btn").click(function() {
@@ -48,15 +45,7 @@ $(document).ready(function() {
     $("#planet").attr("src","img/mars.png");
     if(person) {
       let marsVal = person.marsAge();
-      $("#result").text(marsVal);
-      let arcVal = (marsVal/(78.7*1.88))*2*Math.PI;
-      circle.clearRect(0, 0, canvas.width, canvas.height);
-      circle.beginPath();
-      circle.moveTo(300,300);
-      circle.arc(300,300,200,0,arcVal);
-      circle.closePath();
-      circle.fillStyle="rgb(40, 40, 40, 0.7)";
-      circle.fill();
+      planetDraw(canvas, circle, marsVal, 1.88);
     }
   });
   $("#jupiter-btn").click(function() {
@@ -64,15 +53,7 @@ $(document).ready(function() {
     $("#planet").attr("src","img/jupiter.png");
     if(person) {
       let jupVal = person.jupiterAge();
-      $("#result").text(jupVal);
-      let arcVal = (jupVal/(78.7*11.86))*2*Math.PI;
-      circle.clearRect(0, 0, canvas.width, canvas.height);
-      circle.beginPath();
-      circle.moveTo(300,300);
-      circle.arc(300,300,200,0,arcVal);
-      circle.closePath();
-      circle.fillStyle="rgb(40, 40, 40, 0.7)";
-      circle.fill();
+      planetDraw(canvas, circle, jupVal, 11.86);
     }
   });
   $("#earth-btn").click(function() {
@@ -80,15 +61,7 @@ $(document).ready(function() {
     $("#planet").attr("src","img/earth.png");
     if(person) {
       let earthVal = person.birthdateToNowSeconds() / 31556952;
-      $("#result").text(earthVal);
-      let arcVal = (earthVal/(78.7))*2*Math.PI;
-      circle.clearRect(0, 0, canvas.width, canvas.height);
-      circle.beginPath();
-      circle.moveTo(300,300);
-      circle.arc(300,300,200,0,arcVal);
-      circle.closePath();
-      circle.fillStyle="rgb(40, 40, 40, 0.7)";
-      circle.fill();
+      planetDraw(canvas, circle, earthVal, 1);
     }
   });
 
@@ -96,18 +69,6 @@ $(document).ready(function() {
     person = new Person($("#bday").val());
     $("#result").text(person.birthdate);
     $("#" + planet + "-btn").click();
-    // let earthVal = person.birthdateToNowSeconds() / 31556952;
-    // $("#result").text(earthVal);
-    // let arcVal = (earthVal/(78.7))*2*Math.PI;
-    // circle.clearRect(0, 0, canvas.width, canvas.height);
-    // circle.beginPath();
-    // circle.moveTo(300,300);
-    // circle.arc(300,300,200,0,arcVal);
-    // circle.closePath();
-    // circle.fillStyle="rgb(40, 40, 40, 0.7)";
-    // circle.fill();
     event.preventDefault();
   });
 });
-
-// overlays on the planet your age in a pie chart of expected age
