@@ -22,7 +22,11 @@ describe("Person", function () {
 
   beforeEach(function() {
     person = new Person("1992, 08, 09");
+    person.now = new Date(2018, 4, 20, 9, 42, 30, 0);
+    person.difference = person.now - person.birthdate;
     olderPerson = new Person("1901, 08, 09");
+    olderPerson.now = new Date(2018, 4, 20, 9, 42, 30, 0);
+    olderPerson.difference = olderPerson.now - olderPerson.birthdate;
   });
 
 
