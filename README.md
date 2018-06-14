@@ -1,10 +1,10 @@
 # **Space Calculator!**
 
-#### By Brea Borlas
+#### By Brea Clark
 
 ## Description
 
-A project to practice test driven development and use object oriented programming
+A project to practice test driven development and use object oriented programming. See it live here: https://breaclark.github.io/space-calculator/
 
 ## Specifications
 
@@ -48,5 +48,5 @@ A project to practice test driven development and use object oriented programmin
 
 * GPL
 
-Brea Borlas
+Brea Clark
  © 2018
